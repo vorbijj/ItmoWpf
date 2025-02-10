@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,6 +95,33 @@ namespace SimpleNotepad
             {
                 txtBox.Foreground = Brushes.Red;
             }
+        }
+
+        private void mOpenFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt";
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                txtBox.Text = File.ReadAllText(openFileDialog.FileName);
+            }
+        }
+
+        private void mSaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt";
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.WriteAllText(saveFileDialog.FileName, txtBox.Text);
+            }
+        }
+
+        private void mQuit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

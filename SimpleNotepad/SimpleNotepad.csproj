@@ -94,7 +94,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Img\icon_open_file.png" />
+    <Resource Include="Img\icon_save_file.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Img\icon_bold.png" />
     <Resource Include="Img\icon_italic.png" />

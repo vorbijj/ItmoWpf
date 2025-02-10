@@ -12,9 +12,26 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ToolBarTray Grid.Row="0">
+        <Menu Grid.Row="0" Margin="2" Padding="5" Background="AliceBlue">
+            <MenuItem Header="_Файл">
+                <MenuItem x:Name="mOpenFile"  Header="_Открыть" Click="mOpenFile_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Img/icon_open_file.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mSaveFile" Header="_Сохранить" Click="mSaveFile_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Img/icon_save_file.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="mQuit" Header="_Выход" Click="mQuit_Click"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Grid.Row="1">
             <ToolBar Margin="5" Padding="5" MinWidth="310">
                 <ComboBox x:Name="cmbBoxFont" Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="cmbBoxFont_SelectionChanged">
                     <TextBlock Text="Arial"/>
@@ -49,6 +66,6 @@
                 </StackPanel>
             </ToolBar>
         </ToolBarTray>
-        <TextBox x:Name="txtBox" Grid.Row="1" Margin="5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap"/>
+        <TextBox x:Name="txtBox" Grid.Row="2" Margin="5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Window>
