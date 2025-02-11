@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleNotepad", "SimpleNote
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConverter", "SimpleConverter\SimpleConverter.csproj", "{E1B8CF4A-7DF2-4946-B8BD-FF0349E5C561}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleDependencyProperty", "ExampleDependencyProperty\ExampleDependencyProperty.csproj", "{0839C492-EC6A-4AB5-B9B1-4493BFB95652}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E1B8CF4A-7DF2-4946-B8BD-FF0349E5C561}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1B8CF4A-7DF2-4946-B8BD-FF0349E5C561}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1B8CF4A-7DF2-4946-B8BD-FF0349E5C561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0839C492-EC6A-4AB5-B9B1-4493BFB95652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0839C492-EC6A-4AB5-B9B1-4493BFB95652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0839C492-EC6A-4AB5-B9B1-4493BFB95652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0839C492-EC6A-4AB5-B9B1-4493BFB95652}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
