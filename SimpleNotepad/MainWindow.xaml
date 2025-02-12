@@ -38,16 +38,20 @@
         </Menu>
         <ToolBarTray Grid.Row="1">
             <ToolBar Margin="5" Padding="5" MinWidth="310">
-                <ComboBox x:Name="cmbBoxFont" Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="cmbBoxFont_SelectionChanged">
-                    <TextBlock Text="Arial"/>
-                    <TextBlock Text="Times New Roman"/>
-                    <TextBlock Text="Verdana"/>
-                </ComboBox>
-                <ComboBox x:Name="cmbBoxSize" Margin="5" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="cmbBoxSize_SelectionChanged">
-                    <TextBlock Text="12"/>
-                    <TextBlock Text="14"/>
-                    <TextBlock Text="16"/>
-                </ComboBox>
+                <ComboBox x:Name="cmbBoxFont" 
+                          Margin="5" 
+                          Padding="5" 
+                          SelectedIndex="0" 
+                          Width="200" 
+                          SelectionChanged="cmbBoxFont_SelectionChanged"
+                          ItemsSource="{StaticResource fonts}"/>
+                <ComboBox x:Name="cmbBoxSize" 
+                          Margin="5" 
+                          Padding="5" 
+                          SelectedIndex="2" 
+                          Width="50" 
+                          SelectionChanged="cmbBoxSize_SelectionChanged"
+                          ItemsSource="{StaticResource sizes}"/>
             </ToolBar>
 
             <ToolBar Margin="5" Padding="5" MinWidth="180">
