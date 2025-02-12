@@ -9,6 +9,11 @@
         MinHeight="400" MinWidth="700" 
         Height="500" Width="800"
         Topmost="True">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="mOpenFile_Click"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="mSaveFile_Click"/>
+        <CommandBinding Command="ApplicationCommands.Close" Executed="mQuit_Click"/>
+    </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -17,18 +22,18 @@
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" Margin="2" Padding="5" Background="AliceBlue">
             <MenuItem Header="_Файл">
-                <MenuItem x:Name="mOpenFile"  Header="_Открыть" Click="mOpenFile_Click">
+                <MenuItem x:Name="mOpenFile" Header="_Открыть" Command="ApplicationCommands.Open">
                     <MenuItem.Icon>
                         <Image Source="Img/icon_open_file.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem x:Name="mSaveFile" Header="_Сохранить" Click="mSaveFile_Click">
+                <MenuItem x:Name="mSaveFile" Header="_Сохранить" Command="ApplicationCommands.Save">
                     <MenuItem.Icon>
                         <Image Source="Img/icon_save_file.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator/>
-                <MenuItem x:Name="mQuit" Header="_Выход" Click="mQuit_Click"/>
+                <MenuItem x:Name="mQuit" Header="_Выход" Command="ApplicationCommands.Close"/>
             </MenuItem>
         </Menu>
         <ToolBarTray Grid.Row="1">
