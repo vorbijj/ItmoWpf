@@ -1,0 +1,80 @@
+﻿<Window x:Class="SimpleNotepad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleNotepad"
+        mc:Ignorable="d"
+        Title="SimpleNotepad"
+        MinHeight="400" MinWidth="700" 
+        Height="500" Width="800"
+        Topmost="True">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="mOpenFile_Click"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="mSaveFile_Click"/>
+        <CommandBinding Command="ApplicationCommands.Close" Executed="mQuit_Click"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Margin="2" Padding="5" Background="AliceBlue">
+            <MenuItem Header="_Файл">
+                <MenuItem x:Name="mOpenFile" Header="_Открыть" Command="ApplicationCommands.Open">
+                    <MenuItem.Icon>
+                        <Image Source="Img/icon_open_file.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="mSaveFile" Header="_Сохранить" Command="ApplicationCommands.Save">
+                    <MenuItem.Icon>
+                        <Image Source="Img/icon_save_file.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="mQuit" Header="_Выход" Command="ApplicationCommands.Close"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Grid.Row="1">
+            <ToolBar Margin="5" Padding="5" MinWidth="310">
+                <ComboBox x:Name="cmbBoxFont" 
+                          Margin="5" 
+                          Padding="5" 
+                          SelectedIndex="0" 
+                          Width="200" 
+                          SelectionChanged="cmbBoxFont_SelectionChanged"
+                          ItemsSource="{StaticResource fonts}"/>
+                <ComboBox x:Name="cmbBoxSize" 
+                          Margin="5" 
+                          Padding="5" 
+                          SelectedIndex="2" 
+                          Width="50" 
+                          SelectionChanged="cmbBoxSize_SelectionChanged"
+                          ItemsSource="{StaticResource sizes}"/>
+            </ToolBar>
+
+            <ToolBar Margin="5" Padding="5" MinWidth="180">
+                <ToggleButton x:Name ="btnBold" BorderBrush="White" BorderThickness="2,2,2,2" IsChecked="False" Click="btnBold_Click">
+                    <Image Source="Img/icon_bold.png" Width="32" Height="32"/>
+                </ToggleButton>
+                <Separator Margin="5,2,5,2"/>
+                <ToggleButton x:Name="btnItalic" BorderBrush="White" BorderThickness="2,2,2,2" IsChecked="False" Click="btnItalic_Click" >
+                    <Image Source="Img/icon_italic.png" Width="32" Height="32"/>
+                </ToggleButton>
+                <Separator Margin="5,2,5,2"/>
+                <ToggleButton x:Name="btnUnderline" BorderBrush="White" BorderThickness="2,2,2,2" IsChecked="False" Click="btnUnderline_Click">
+                    <Image Source="Img/icon_underline.png" Width="32" Height="32"/>
+                </ToggleButton>
+            </ToolBar>
+
+            <ToolBar Margin="5" Padding="5" MinWidth="105">
+                <StackPanel VerticalAlignment="Center">
+                    <RadioButton x:Name="rbnBlack" Content="Черный" IsChecked="True" Checked="rbnBlack_Checked"/>
+                    <RadioButton x:Name="rbnRed" Content="Красный" Checked="rbnRed_Checked"/>
+                </StackPanel>
+            </ToolBar>
+        </ToolBarTray>
+        <TextBox x:Name="txtBox" Grid.Row="2" Margin="5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+    </Grid>
+</Window>
