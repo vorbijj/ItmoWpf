@@ -123,5 +123,36 @@ namespace SimpleNotepad
         {
             Application.Current.Shutdown();
         }
+
+        private void cmbBoxThemes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string nameAddTheme;
+            string nameRemoveTheme;
+            if (cmbBoxThemes.SelectedIndex == 0)
+            {
+                nameAddTheme = "LightTheme.xaml";
+                nameRemoveTheme = "DarkTheme.xaml";
+            }
+            else
+            {
+                nameAddTheme = "DarkTheme.xaml";
+                nameRemoveTheme = "LightTheme.xaml";
+            }
+
+            int count = 0;
+            foreach(var item in Application.Current.Resources.MergedDictionaries)
+            {
+                if (item.Source.OriginalString == nameRemoveTheme)
+                {
+                    Application.Current.Resources.MergedDictionaries.RemoveAt(count);
+                    break;
+                }
+                count++;
+            }
+
+            ResourceDictionary themeDct = new ResourceDictionary();
+            themeDct.Source = new Uri(nameAddTheme, UriKind.Relative);
+            Application.Current.Resources.MergedDictionaries.Add(themeDct);
+        }
     }
 }
