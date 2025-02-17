@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConverter", "SimpleCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleDependencyProperty", "ExampleDependencyProperty\ExampleDependencyProperty.csproj", "{0839C492-EC6A-4AB5-B9B1-4493BFB95652}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirrorApp", "MirrorApp\MirrorApp.csproj", "{9715DFAA-9C80-458B-B344-E05F2CF38BD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0839C492-EC6A-4AB5-B9B1-4493BFB95652}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0839C492-EC6A-4AB5-B9B1-4493BFB95652}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0839C492-EC6A-4AB5-B9B1-4493BFB95652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9715DFAA-9C80-458B-B344-E05F2CF38BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9715DFAA-9C80-458B-B344-E05F2CF38BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9715DFAA-9C80-458B-B344-E05F2CF38BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9715DFAA-9C80-458B-B344-E05F2CF38BD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
