@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleDependencyProperty",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirrorApp", "MirrorApp\MirrorApp.csproj", "{9715DFAA-9C80-458B-B344-E05F2CF38BD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolApp1", "SymbolApp1\SymbolApp1.csproj", "{CFC84704-C9C8-4665-B151-49760E1AA85C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolApp2", "SymbolApp2\SymbolApp2.csproj", "{D89A0E0C-1996-4006-8A47-C7EA1AA8D50D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{9715DFAA-9C80-458B-B344-E05F2CF38BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9715DFAA-9C80-458B-B344-E05F2CF38BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9715DFAA-9C80-458B-B344-E05F2CF38BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC84704-C9C8-4665-B151-49760E1AA85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC84704-C9C8-4665-B151-49760E1AA85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC84704-C9C8-4665-B151-49760E1AA85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC84704-C9C8-4665-B151-49760E1AA85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89A0E0C-1996-4006-8A47-C7EA1AA8D50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89A0E0C-1996-4006-8A47-C7EA1AA8D50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89A0E0C-1996-4006-8A47-C7EA1AA8D50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89A0E0C-1996-4006-8A47-C7EA1AA8D50D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
