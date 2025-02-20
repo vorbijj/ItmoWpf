@@ -27,23 +27,23 @@ namespace SimpleNotepad
             InitializeComponent();
         }
 
-        private void cmbBoxFont_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (txtBox != null)
-            {
-                string fontName = ((sender as ComboBox).SelectedItem as string);
-                txtBox.FontFamily = new FontFamily(fontName);
-            }
-        }
+        //private void cmbBoxFont_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    if (txtBox != null)
+        //    {
+        //        string fontName = ((sender as ComboBox).SelectedItem as string);
+        //        txtBox.FontFamily = new FontFamily(fontName);
+        //    }
+        //}
 
-        private void cmbBoxSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (txtBox != null)
-            {
-                double fontSize = Convert.ToDouble(((sender as ComboBox).SelectedItem as string));
-                txtBox.FontSize = fontSize;
-            }
-        }
+        //private void cmbBoxSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    if (txtBox != null)
+        //    {
+        //        double fontSize = Convert.ToDouble(((sender as ComboBox).SelectedItem as string));
+        //        txtBox.FontSize = fontSize;
+        //    }
+        //}
 
         private void btnBold_Click(object sender, RoutedEventArgs e)
         {

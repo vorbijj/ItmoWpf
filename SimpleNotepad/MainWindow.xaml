@@ -43,15 +43,13 @@
                           Margin="5" 
                           Padding="5" 
                           SelectedIndex="0" 
-                          Width="200" 
-                          SelectionChanged="cmbBoxFont_SelectionChanged"
+                          Width="200"                           
                           ItemsSource="{StaticResource fonts}"/>
                 <ComboBox x:Name="cmbBoxSize" 
                           Margin="5" 
                           Padding="5" 
                           SelectedIndex="2" 
-                          Width="50" 
-                          SelectionChanged="cmbBoxSize_SelectionChanged"
+                          Width="50"                          
                           ItemsSource="{StaticResource sizes}"/>
             </ToolBar>
 
@@ -83,6 +81,13 @@
                           SelectionChanged="cmbBoxThemes_SelectionChanged"/>
             </ToolBar>
         </ToolBarTray>
-        <TextBox x:Name="txtBox" Grid.Row="2" Margin="5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="txtBox" 
+                 Grid.Row="2" 
+                 Margin="5" 
+                 Padding="5" 
+                 FontSize="{Binding ElementName=cmbBoxSize, Path=Text}" 
+                 FontFamily="{Binding ElementName=cmbBoxFont, Path=Text}" 
+                 TextWrapping="Wrap" 
+                 VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Window>
