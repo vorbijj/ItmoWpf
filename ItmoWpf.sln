@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBoxApp", "CheckBoxApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsApp", "ProductsApp\ProductsApp.csproj", "{5BD9554A-7AC1-4D56-833F-93B1DC9B315C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookReaderApp", "BookReaderApp\BookReaderApp.csproj", "{7BE4C675-3B87-4F7B-9B67-D84FE72885B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{5BD9554A-7AC1-4D56-833F-93B1DC9B315C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BD9554A-7AC1-4D56-833F-93B1DC9B315C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BD9554A-7AC1-4D56-833F-93B1DC9B315C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE4C675-3B87-4F7B-9B67-D84FE72885B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE4C675-3B87-4F7B-9B67-D84FE72885B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE4C675-3B87-4F7B-9B67-D84FE72885B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE4C675-3B87-4F7B-9B67-D84FE72885B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
