@@ -1,0 +1,165 @@
+﻿<Window x:Class="BookReaderApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookReaderApp"
+        mc:Ignorable="d"
+        Title="BookReaderApp" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ToolBarTray Grid.Row="0">
+            <ToolBar>
+                <Button x:Name="mOpen" Width="32" Height="32" Click="mOpen_Click">
+                    <Image Source="Img/icon_open.png"/>
+                </Button>
+                <Button x:Name="mSave" Width="32" Height="32" Click="mSave_Click">
+                    <Image Source="Img/icon_save.png"/>
+                </Button>
+                <Button x:Name="mPrint" Width="32" Height="32" Click="mPrint_Click">
+                    <Image Source="Img/icon_print.png"/>
+                </Button>
+                <Button x:Name="mClear" Width="32" Height="32" Click="mClear_Click">
+                    <Image Source="Img/icon_clear.png"/>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <FlowDocumentScrollViewer Name="docViewer" Grid.Row="1" Margin="5">
+            <FlowDocument>
+                <Paragraph FontSize="26" TextAlignment="Center">
+                    <Bold>
+                        <Underline>Колонны в архитектуре</Underline>
+                    </Bold>
+                </Paragraph>
+                <Paragraph>
+                    <Italic>Колонна</Italic> (<Italic>фр. colonne, от лат. cоlumna</Italic> , "столб") — это вертикальный элемент каркаса здания, предназначенный для восприятия нагрузок от элементов перекрытия и ограждающих конструкций. Материал выполнения колонн всегда разный: кто-то использует камень, а кто-то может и из дерева создавать колонны.
+                </Paragraph>
+                <Paragraph>
+                    Колонны появились очень давно, люди, как всегда, придумали их подсмотрев эту идею у природы. Существуют две основные версии происхождения колонн: конструктивная и символическая. Образ колонн часто связывают с мировым древом или древом жизни.
+                </Paragraph>
+                <BlockUIContainer>
+                    <Image Source="Data/Schema_Saeulenordnungen.jpg"/>
+                </BlockUIContainer>
+                <Paragraph>
+                    <Bold>Элементы колонн:</Bold>
+                    <Floater Width="500" HorizontalAlignment="Right">
+                        <BlockUIContainer>
+                            <Image Source="Data/elem_column.png"/>
+                        </BlockUIContainer>
+                    </Floater>
+                </Paragraph>
+                <List MarkerStyle="Disc">
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Абака</Bold> — плита, составляющая верхнюю часть капители колонны, полуколонны, пилястры.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Архитектурный ордер</Bold> — в традиционном понимании это тип архитектурной композиции, состоящей из вертикальных (колонны, пилястры) и горизонтальных (антаблемент) элементов.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>База</Bold> — нижняя расширяющаяся часть, которая расположена между фустом (стволом) колонны и стилобатом. Призвана распределять вес опоры с перекрытием на цоколь или стереобат. В древнегреческом дорическом ордере база отсутствует. В ионическом, коринфском и аттическом сложно профилирована.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Капитель</Bold> — верхняя часть колонны, распределяющая нагрузку с несомых элементов. Однако чаще имеет зрительное, тектоническое или декоративное значение, поэтому является наиболее выразительным элементом в художественном отношении.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Ордерная аркада</Bold> — архитектурная композиция представляющая собой ряд арок, опирающихся непосредственно на капители колонн.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Фуст</Bold> (тело колонны) — основная часть колонны. В классическом дорическом, ионическом и коринфском ордерах фуст колонны имеет каннелюры.
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph>
+                    <Bold>Виды колонн по оформлению:</Bold>
+                </Paragraph>
+                <Table CellSpacing="0" BorderBrush="Silver" BorderThickness="1,1,0,0">
+                    <Table.Resources>
+                        <Style TargetType="TableCell">
+                            <Setter Property="BorderBrush" Value="Silver"/>
+                            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                        </Style>
+                        <Style TargetType="Paragraph">
+                            <Setter Property="Padding" Value="10,40,10,0"/>
+                        </Style>
+                    </Table.Resources>
+                    <Table.Columns>
+                        <TableColumn Width="*"/>
+                        <TableColumn Width="3*"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>                            
+                            <TableCell>
+                                <BlockUIContainer>
+                                    <Image Source="Data/cDoric.png"/>
+                                </BlockUIContainer>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>С наиболее массивным и простым форменным выражением, состоящие из основания, колонны и капители. Характерными особенностями дорических колонн являются барабан с 20-24 гранями, а также квадратная кайма капитель.</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <BlockUIContainer>
+                                    <Image Source="Data/cIonic.png"/>
+                                </BlockUIContainer>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Более изящные и богатые по декору, чем дорические. Ионическая колонна имеет подножие, делящее основание на две части: внутреннюю квадратную, и внешнюю — более широкую и украшенную орнаментом. Также на ионических колоннах имеются своеобразные валики (волновые зарубки / барашки), что создаёт эффект лёгкости.</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <BlockUIContainer>
+                                    <Image Source="Data/cCorinthian.png"/>
+                                </BlockUIContainer>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Наиболее изысканные и богатые по декору, из украшений нередко присутствовали листья, цветы и другие элементы. Характерной особенностью коринфских колонн являются сложные абаки с «греческими листьями» на углах.</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <BlockUIContainer>
+                                    <Image Source="Data/cComposite.png"/>
+                                </BlockUIContainer>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Представляют собой смесь коринфской и ионической формы. Они сочетают в себе богатство коринфских узоров и лёгкость ионических.</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <BlockUIContainer>
+                                    <Image Source="Data/cTuscan.png"/>
+                                </BlockUIContainer>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Наиболее простые и массивные. Они имеют простое основание, гладкий ствол колонны и простую кубовидную капитель без орнаментов.</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph>
+                    <Bold>Колонны в разных уголках мира:</Bold>
+                </Paragraph>
+                <Paragraph>
+                    Колонны символизируют стойкость и надежность, поэтому они всегда были популярны в зданиях, где нужна поддержка. Например, большинство зданий в Древней Греции были украшены колоннами. Такие колонны, как дорические, ионические и коринфские, были известны своей элегантностью и необычным декором. Они создавали уникальные архитектурные композиции, которые стали символом Древней Греции. В Египте колонны использовались для украшения храмов и пирамид. Они могли быть совершенно разными по размеру и сложности, а также декору. В Индии, колонны использовались для создания храмов и палаток. Они были украшены разнообразными узорами и изображениями божеств. В Риме очень часто использовали колонны. Их часто использовали в амфитеатрах и других постройках, в которых находилось много людей, наиболее популярным примером является Колизей.
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Window>
