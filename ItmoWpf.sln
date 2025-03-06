@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorIndicator", "ColorIndi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CubeViewerApp", "CubeViewerApp\CubeViewerApp.csproj", "{B447454F-C8FC-4662-AF5B-E7D3D2CD397E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LengthCircleApp", "LengthCircleApp\LengthCircleApp.csproj", "{7B24302C-5D62-4F66-942B-3C5DB1972A6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{B447454F-C8FC-4662-AF5B-E7D3D2CD397E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B447454F-C8FC-4662-AF5B-E7D3D2CD397E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B447454F-C8FC-4662-AF5B-E7D3D2CD397E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B24302C-5D62-4F66-942B-3C5DB1972A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B24302C-5D62-4F66-942B-3C5DB1972A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B24302C-5D62-4F66-942B-3C5DB1972A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B24302C-5D62-4F66-942B-3C5DB1972A6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
